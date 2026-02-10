@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Encomenda Pokémon | Arceus</title>
+
+  <!-- Fonte divina -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="arceus-img">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/493.png" alt="Arceus">
+    </div>
+
+    <h1>Encomenda Divina</h1>
+    <p class="sub">Sob o julgamento de Arceus</p>
+
+    <label>Pokémon</label>
+    <input type="text" id="pokemon" placeholder="Ex: Arceus">
+
+    <label>Habilidade</label>
+    <input type="text" id="habilidade" placeholder="Ex: Multitype">
+
+    <label>Sexo</label>
+    <select id="sexo">
+      <option>Masculino</option>
+      <option>Feminino</option>
+      <option>Sem gênero</option>
+    </select>
+
+    <label>Egg Moves</label>
+    <textarea id="eggMoves" placeholder="Separe por vírgula"></textarea>
+
+    <label>IVs Perfeitos (31)</label>
+    <div class="ivs">
+      <label><input type="checkbox" value="HP"> HP</label>
+      <label><input type="checkbox" value="Atk"> Atk</label>
+      <label><input type="checkbox" value="Def"> Def</label>
+      <label><input type="checkbox" value="Sp.Atk"> Sp.Atk</label>
+      <label><input type="checkbox" value="Sp.Def"> Sp.Def</label>
+      <label><input type="checkbox" value="Speed"> Speed</label>
+    </div>
+
+    <button onclick="gerarPedido()">Confirmar Encomenda</button>
+
+    <div class="resultado" id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
