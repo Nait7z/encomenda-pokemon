@@ -1,54 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Encomenda Pokémon | Arceus</title>
-
-  <!-- Fonte divina -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
-
+  <title>Hellheim Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="container">
 
-    <div class="arceus-img">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/493.png" alt="Arceus">
+    <div class="top-image">
+      <img src="arceus.png" alt="Arceus">
     </div>
 
-    <h1>Encomenda Divina</h1>
-    <p class="sub">Sob o julgamento de Arceus</p>
+    <h1>Asgard Store</h1>
+    <p class="subtitle">Encomenda forjada sob os deuses ⚔️</p>
 
-    <label>Pokémon</label>
-    <input type="text" id="pokemon" placeholder="Ex: Arceus">
+    <form id="pedidoForm">
 
-    <label>Habilidade</label>
-    <input type="text" id="habilidade" placeholder="Ex: Multitype">
+      <label>Nick do Minecraft</label>
+      <input type="text" id="nickMine" placeholder="Seu nick no Minecraft" required>
 
-    <label>Sexo</label>
-    <select id="sexo">
-      <option>Masculino</option>
-      <option>Feminino</option>
-      <option>Sem gênero</option>
-    </select>
+      <label>Nick do Discord</label>
+      <input type="text" id="nickDiscord" placeholder="Seu nick no Discord" required>
 
-    <label>Egg Moves</label>
-    <textarea id="eggMoves" placeholder="Separe por vírgula"></textarea>
+      <label>Pokémon</label>
+      <input type="text" id="pokemon" placeholder="Ex: Garchomp" required>
 
-    <label>IVs Perfeitos (31)</label>
-    <div class="ivs">
-      <label><input type="checkbox" value="HP"> HP</label>
-      <label><input type="checkbox" value="Atk"> Atk</label>
-      <label><input type="checkbox" value="Def"> Def</label>
-      <label><input type="checkbox" value="Sp.Atk"> Sp.Atk</label>
-      <label><input type="checkbox" value="Sp.Def"> Sp.Def</label>
-      <label><input type="checkbox" value="Speed"> Speed</label>
+      <label>Habilidade</label>
+      <input type="text" id="habilidade" placeholder="Ex: Rough Skin">
+
+      <label>Sexo</label>
+      <select id="sexo">
+        <option value="Macho">Macho</option>
+        <option value="Fêmea">Fêmea</option>
+        <option value="Indefinido">Indefinido</option>
+      </select>
+
+      <label>Egg Move</label>
+      <input type="text" id="eggmove" placeholder="Opcional">
+
+      <label>IVs Perfeitos</label>
+      <div class="iv-container">
+        <label><input type="checkbox" value="HP"> HP</label>
+        <label><input type="checkbox" value="Attack"> Attack</label>
+        <label><input type="checkbox" value="Defense"> Defense</label>
+        <label><input type="checkbox" value="Sp. Attack"> Sp. Attack</label>
+        <label><input type="checkbox" value="Sp. Defense"> Sp. Defense</label>
+        <label><input type="checkbox" value="Speed"> Speed</label>
+      </div>
+
+      <button type="submit">Enviar Pedido ⚡</button>
+
+    </form>
+
+    <div class="footer">
+      © 2026 Asgard Store — Todos os direitos reservados
     </div>
 
-    <button onclick="gerarPedido()">Confirmar Encomenda</button>
-
-    <div class="resultado" id="resultado"></div>
   </div>
 
   <script src="script.js"></script>
